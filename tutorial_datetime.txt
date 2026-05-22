@@ -1,0 +1,7 @@
+datetime.date.today()	2026-05-22
+datetime.datetime.now()	2026-05-22 21:00:00...
+datetime.date(2026,12,25)	2026-12-25
+now.year	2026
+now.month	5
+now.day	22
+now.strftime("%d/%m/%Y")	22/05/2026

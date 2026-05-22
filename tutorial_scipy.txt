@@ -1,0 +1,17 @@
+from scipy import stats
+from scipy import integrate
+from scipy import linalg
+
+stats.mode([1,2,2,3])		ModeResult(mode=2,count=2)
+stats.zscore([10,20,30])	[-1.22 0 1.22]
+
+
+integrate.quad(
+ lambda x:x,
+ 0,1
+)		(0.5,error)
+
+linalg.det([[1,2],[3,4]])		-2.0
+
+linalg.inv([[1,2],[3,4]])		[[-2. 1.]
+ 					[1.5 -0.5]]

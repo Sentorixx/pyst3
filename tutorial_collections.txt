@@ -1,0 +1,11 @@
+from collections import *
+Counter("banana")
+Counter({'a':3,'n':2,'b':1})
+Counter("banana").most_common(1)
+
+d = defaultdict(int)
+
+print(d["x"])
+
+dq = deque([1,2])
+dq.appendleft(0)

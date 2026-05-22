@@ -1,0 +1,18 @@
+import pandas as pd
+
+
+df = pd.DataFrame({
+ "Name":["Sen"],
+ "Age":[19]
+})
+  Name Age
+0 Sen  19
+
+pd.read_csv("data.csv")			DataFrame
+df.head()		First 5 rows
+df.shape		(rows, columns)
+df["Age"]		0 19
+df.loc[0]		First row
+df.iloc[0,1]		Specific cell value
+df.describe()		count mean std min max ...
+df.to_csv("new.csv",index=False)
