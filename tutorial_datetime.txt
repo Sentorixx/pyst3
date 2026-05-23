@@ -5,3 +5,33 @@ now.year	2026
 now.month	5
 now.day	22
 now.strftime("%d/%m/%Y")	22/05/2026
+
+
+Function	Example	Output
+datetime.now()	datetime.now()	Current date & time
+date.today()	date.today()	Current date
+datetime(year,month,day)	datetime(2026,5,23)	2026-05-23 00:00:00
+time(hour,min)	time(14,30)	14:30:00
+timedelta(days=5)	timedelta(days=5)	Time difference object
+strftime()	now.strftime("%d/%m/%Y")	"23/05/2026"
+strptime()	datetime.strptime("23-05-2026","%d-%m-%Y")	Datetime object
+.year	now.year	2026
+.month	now.month	5
+.day	now.day	23
+.hour	now.hour	Current hour
+.minute	now.minute	Current minute
+.second	now.second	Current second
+
+
+Format Code	Meaning	Example
+%d	Day	23
+%m	Month	05
+%Y	Year (4-digit)	2026
+%y	Year (2-digit)	26
+%H	Hour (24h)	14
+%I	Hour (12h)	02
+%M	Minute	30
+%S	Second	45
+%p	AM/PM	PM
+%A	Weekday	Saturday
+%B	Month name	May
