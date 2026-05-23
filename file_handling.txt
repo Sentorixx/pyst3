@@ -1,0 +1,53 @@
+1. File Handling Programs
+Program 1: Write and read from file
+Python
+
+
+Run
+f=open("sample.txt","w")
+
+f.write("Python Programming")
+
+f.close()
+
+f=open("sample.txt","r")
+
+print(f.read())
+
+f.close()
+Program 2: Count words, lines, characters
+Python
+
+
+Run
+f=open("sample.txt","r")
+
+data=f.read()
+
+characters=len(data)
+
+words=len(data.split())
+
+f.seek(0)
+
+lines=len(f.readlines())
+
+print("Characters:",characters)
+print("Words:",words)
+print("Lines:",lines)
+
+f.close()
+Program 3: Copy one file to another
+Python
+
+
+Run
+f1=open("sample.txt","r")
+f2=open("copy.txt","w")
+
+f2.write(f1.read())
+
+print("Copied Successfully")
+
+f1.close()
+f2.close()
