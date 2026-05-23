@@ -42,3 +42,146 @@ for i in range(r):
             matrix[i][j] = 0
 
 print(matrix)
+
+
+
+NumPy Programs
+Python
+
+
+Run
+import numpy as np
+1. Create 1D and 2D arrays
+Python
+
+
+Run
+a=np.array([1,2,3,4])
+
+b=np.array([[1,2],[3,4]])
+
+print(a)
+print(b)
+2. Create array using arange()
+Python
+
+
+Run
+a=np.arange(1,11)
+
+print(a)
+Output:
+
+
+[1 2 3 4 5 6 7 8 9 10]
+3. Create evenly spaced values using linspace()
+Python
+
+
+Run
+a=np.linspace(1,10,5)
+
+print(a)
+4. Create zeros, ones, identity matrix
+Python
+
+
+Run
+print(np.zeros((3,3)))
+
+print(np.ones((2,2)))
+
+print(np.eye(3))
+5. Reshape array
+Python
+
+
+Run
+a=np.array([1,2,3,4,5,6])
+
+b=a.reshape(2,3)
+
+print(b)
+6. Matrix addition
+Python
+
+
+Run
+a=np.array([[1,2],[3,4]])
+
+b=np.array([[5,6],[7,8]])
+
+print(a+b)
+7. Matrix subtraction
+Python
+
+
+Run
+print(a-b)
+8. Matrix multiplication
+Python
+
+
+Run
+print(np.dot(a,b))
+9. Find transpose
+Python
+
+
+Run
+a=np.array([[1,2],[3,4]])
+
+print(a.T)
+10. Find maximum, minimum, mean
+Python
+
+
+Run
+a=np.array([10,20,30,40])
+
+print(np.max(a))
+print(np.min(a))
+print(np.mean(a))
+11. Sort array
+Python
+
+
+Run
+a=np.array([4,2,8,1])
+
+print(np.sort(a))
+12. Find index
+Python
+
+
+Run
+a=np.array([10,20,30])
+
+print(np.where(a==20))
+13. Random numbers
+Python
+
+
+Run
+a=np.random.randint(1,100,5)
+
+print(a)
+14. Slice array
+Python
+
+
+Run
+a=np.array([10,20,30,40,50])
+
+print(a[1:4])
+15. Sum of rows and columns
+Python
+
+
+Run
+a=np.array([[1,2],
+            [3,4]])
+
+print(np.sum(a,axis=0))
+
+print(np.sum(a,axis=1))

@@ -1,0 +1,130 @@
+Pandas Programs
+Python
+
+
+Run
+import pandas as pd
+1. Create Series
+Python
+
+
+Run
+s=pd.Series([10,20,30,40])
+
+print(s)
+2. Create DataFrame
+Python
+
+
+Run
+data={
+"Name":["Ram","Sam","John"],
+"Marks":[90,85,95]
+}
+
+df=pd.DataFrame(data)
+
+print(df)
+3. Read CSV file
+Python
+
+
+Run
+df=pd.read_csv("student.csv")
+
+print(df)
+4. Display first rows
+Python
+
+
+Run
+print(df.head())
+5. Display last rows
+Python
+
+
+Run
+print(df.tail())
+6. Find shape
+Python
+
+
+Run
+print(df.shape)
+7. Display columns
+Python
+
+
+Run
+print(df.columns)
+8. Statistical summary
+Python
+
+
+Run
+print(df.describe())
+9. Select one column
+Python
+
+
+Run
+print(df["Marks"])
+10. Select multiple columns
+Python
+
+
+Run
+print(df[["Name","Marks"]])
+11. Filter records
+Python
+
+
+Run
+print(df[df["Marks"]>80])
+12. Sort values
+Python
+
+
+Run
+print(df.sort_values("Marks"))
+13. Add new column
+Python
+
+
+Run
+df["Grade"]=["A","B","A"]
+
+print(df)
+14. Remove a column
+Python
+
+
+Run
+df.drop("Grade",axis=1,inplace=True)
+
+print(df)
+15. Find null values
+Python
+
+
+Run
+print(df.isnull())
+16. Fill null values
+Python
+
+
+Run
+df.fillna(0,inplace=True)
+17. Group by operation
+Python
+
+
+Run
+data={
+"Department":["CSE","IT","CSE","IT"],
+"Marks":[90,80,70,60]
+}
+
+df=pd.DataFrame(data)
+
+print(df.groupby("Department").sum())
