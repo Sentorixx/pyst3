@@ -1,0 +1,44 @@
+import numpy as np
+
+n = int(input())
+
+dtype = np.dtype([
+    ('Title', 'U50'),
+    ('Author', 'U50'),
+    ('Pages', 'i4'),
+    ('Rating', 'f4')
+])
+
+books = []
+for _ in range(n):
+    line = input().split()
+    title, author, pages, rating = line[0], line[1], int(line[2]), float(line[3])
+    books.append((title, author, pages, rating))
+
+library = np.array(books, dtype=dtype)
+
+print("All books:")
+print(library)
+
+print("Books with more than 300 pages:")
+print(library[library['Pages'] > 300])
+
+print("Books with rating > 4.0:")
+print(library[library['Rating'] > 4.0])
+
+
+##############################################
+
+import numpy as np
+
+r = int(input())
+c = int(input())
+
+matrix = np.ones((r, c))
+
+for i in range(r):
+    for j in range(c):
+        if (i % 2 == 0 and j % 2 == 1) or (i % 2 == 1 and j % 2 == 0):
+            matrix[i][j] = 0
+
+print(matrix)
