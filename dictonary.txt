@@ -1,0 +1,138 @@
+Dictionary 1.2. n = int(input())
+d1 = {}
+for _ in range(n):
+    key = input()
+    value = int(input())
+    d1[key] = value
+
+m = int(input())
+d2 = {}
+for _ in range(m):
+    key = input()
+    value = int(input())
+    d2[key] = value
+
+combined = dict(d1)
+for k in d2:
+    if k in combined:
+        combined[k] += d2[k]
+    else:
+        combined[k] = d2[k]
+
+print("Combined Dictionary:", combined) n = int(input())
+product_prices = {}
+
+for _ in range(n):
+    line = list(map(int, input().split()))
+    product_id = line[0]
+    prices = line[2:]  # skip store_id at line[1]
+    
+    if product_id not in product_prices:
+        product_prices[product_id] = []
+    product_prices[product_id].extend(prices)
+
+result = {}
+for pid in product_prices:
+    if len(product_prices[pid]) > 1:
+        result[pid] = min(product_prices[pid])
+
+print(result) Dict 1.3 n = int(input())
+
+d = {}
+num = 2
+count = 1
+
+while count <= n:
+    prime = True
+
+    for i in range(2, num):
+        if num % i == 0:
+            prime = False
+            break
+
+    if prime:
+        d[count] = num
+        count += 1
+
+    num += 1
+
+print(d) Prime no. n = int(input())
+
+sales_dict = {}
+
+for _ in range(n):
+    line = input().split()
+    customer_id = int(line[0])
+    
+    amounts = []
+    for x in line[1:]:
+        amounts.append(int(x))
+        
+    total_expenditure = sum(amounts)
+    max_single_purchase = max(amounts)
+    
+    sales_dict[customer_id] = [total_expenditure, max_single_purchase]
+
+print(sales_dict) Dict 1./ast Dict 2.1 n = int(input())
+
+freq = {}
+
+for _ in range(n):
+    pid = int(input())
+    if pid not in freq:
+        freq[pid] = 0
+    freq[pid] += 1
+
+total_unique = len(freq)
+avg = sum(freq.values()) / total_unique
+
+print(freq)
+print("Total Unique IDs:", total_unique)
+print("Average Frequency:", '%.2f' % avg) Dict 2.2 n = int(input())
+
+freq = {}
+
+for _ in range(n):
+    line = list(map(int, input().split()))
+    k = line[0]        # first number = count
+    plants = line[1:]  # remaining = plant varieties
+
+    for plant in plants:
+        if plant not in freq:
+            freq[plant] = 0
+        freq[plant] += 1
+
+print(freq) Dict 2.3 n = int(input())
+budget = {}
+
+for _ in range(n):
+    category = int(input())
+    amount = int(input())
+    if category not in budget:
+        budget[category] = 0
+    budget[category] += amount
+
+m = int(input())
+for _ in range(m):
+    category = int(input())
+    amount = int(input())
+    if category not in budget:
+        budget[category] = 0
+    budget[category] += amount
+
+print("Merged Budget", budget) Dict 2.5 Dict 3.1 n = int(input())
+squares = {}
+
+for i in range(1, n+1):
+    squares[i] = i * i
+
+print(squares) Dict 3.3 n = int(input())
+medals = {}
+
+for _ in range(n):
+    medal = int(input())
+    if medal not in medals:
+        medals[medal] = 0
+    medals[medal] += 1
+
+print("Medal Count", medals) Dict 3.2
