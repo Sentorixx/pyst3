@@ -1,11 +1,21 @@
 from collections import *
-Counter("banana")
-Counter({'a':3,'n':2,'b':1})
-Counter("banana").most_common(1)
 
-d = defaultdict(int)
+Counter
+Function	Example	Output
+Counter()	Counter("aab")	{'a':2,'b':1}
+most_common()	Counter("aab").most_common(1)	[('a',2)]
+elements()	list(Counter(a=2,b=1).elements())	['a','a','b']
 
-print(d["x"])
+defaultdict
+Function	Example	Output
+defaultdict(int)	d['a']+=1	No KeyError
+defaultdict(list)	d['a'].append(1)	Creates list automatically
 
-dq = deque([1,2])
-dq.appendleft(0)
+deque
+Function	Example	Output
+append()	dq.append(5)	Add right
+appendleft()	dq.appendleft(5)	Add left
+pop()	dq.pop()	Remove right
+popleft()	dq.popleft()	Remove left
+rotate()	dq.rotate(1)	Shift right
+

@@ -16,3 +16,22 @@ df.loc[0]		First row
 df.iloc[0,1]		Specific cell value
 df.describe()		count mean std min max ...
 df.to_csv("new.csv",index=False)
+
+
+Function	Example	Output
+pd.DataFrame()	pd.DataFrame({"A":[1,2]})	Table
+pd.Series()	pd.Series([1,2,3])	1D labeled array
+df.head()	df.head()	First 5 rows
+df.tail()	df.tail()	Last 5 rows
+df.info()	df.info()	Column summary
+df.describe()	df.describe()	Statistics
+df.shape	df.shape	(rows, cols)
+df.columns	df.columns	Column names
+df.loc[]	df.loc[0]	Row by label
+df.iloc[]	df.iloc[0]	Row by index
+df.sort_values()	df.sort_values("A")	Sorted table
+df.groupby()	df.groupby("Dept").sum()	Grouped result
+df.drop()	df.drop("A",axis=1)	Remove column
+df.fillna()	df.fillna(0)	Replace NaN
+pd.read_csv()	pd.read_csv("a.csv")	Load CSV
+df.to_csv()	df.to_csv("a.csv")	Save CSV
