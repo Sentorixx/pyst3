@@ -1,0 +1,20 @@
+matlib fibonicci
+import math
+
+n = int(input())
+
+fib = []
+
+a, b = 0, 1
+
+for i in range(n):
+    fib.append(a)
+    a, b = b, a + b
+
+golden_ratio_approx = fib[-1] / fib[-2]
+
+exact_golden_ratio = (1 + math.sqrt(5)) / 2
+
+print("Fibonacci Sequence:", fib)
+print("Golden Ratio Approximation: {:.2f}".format(golden_ratio_approx))
+print("Exact Golden Ratio: {:.2f}".format(exact_golden_ratio))
